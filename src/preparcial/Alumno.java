@@ -58,8 +58,7 @@ public class Alumno implements horasFacultad{
         double horasTotales = 0;
         for(int i=0; i< getmAsignatura().length;i++){
             Asignatura aux = getmAsignatura()[i];
-            horasTotales = horasTotales + aux.cu();
-
+            horasTotales = horasTotales + aux.getHorasCursadas();
         }
         return horasTotales;
     }
@@ -73,4 +72,5 @@ public class Alumno implements horasFacultad{
             }
         }
     }
+
 }

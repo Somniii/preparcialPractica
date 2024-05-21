@@ -40,6 +40,8 @@ public class Asignatura {
 
     public double cuentaHorasCursada(horasFacultad hora){
         horasFacultad aux = hora;
-        horasCursadas 
+        double horasSemanales;
+        horasSemanales=(hora.cantidadHorasMensuales())/4.2;
+        return horasSemanales;
     }
 }

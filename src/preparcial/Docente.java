@@ -22,4 +22,14 @@ public class Docente extends Personal implements horasFacultad{
     public void setmAsignatura(Asignatura[] mAsignatura) {
         this.mAsignatura = mAsignatura;
     }
+
+    @Override
+    public double cantidadHorasMensuales() {
+        double horasTotalesDocente = 0;
+        for(int i=0;i< getmAsignatura().length;i++){
+            Asignatura aux = getmAsignatura()[i];
+            horasTotalesDocente = horasTotalesDocente + aux.getHorasCursadas() + (10*4.2);
+        }
+        return horasTotalesDocente;
+    }
 }
