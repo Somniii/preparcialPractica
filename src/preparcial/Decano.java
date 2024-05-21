@@ -1,17 +1,20 @@
 package preparcial;
 
 public class Decano extends Personal implements horasFacultad {
+    private final static double salarioHora = 3000;
+
     public Decano() {
     }
 
     public Decano(String nombre, String apellido, String cargoFuncion) {
         super(nombre, apellido, cargoFuncion);
     }
-    //FALTA FUNCION PUBLIC DECANO
+    @Override
+    public double sueldo(double d){
+        return cantidadHorasMensuales()*salarioHora;
+    }
     public double cantidadHorasMensuales(){
 
     }
-    public double sueldo(Double d){
 
-    }
 }

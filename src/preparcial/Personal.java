@@ -37,5 +37,8 @@ public class Personal {
     public void setCargoFuncion(String cargoFuncion) {
         this.cargoFuncion = cargoFuncion;
     }
-    //FALTA IMPLEMENTAR DOS FUNCIONES
+    //FALTA IMPLEMENTAR UNA FUNCION
+    public double sueldo(double d){
+        return 0;
+    }
 }

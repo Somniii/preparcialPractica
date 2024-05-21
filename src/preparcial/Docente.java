@@ -1,6 +1,7 @@
 package preparcial;
 
 public class Docente extends Personal implements horasFacultad{
+    private final static double salarioHora = 2000;
     private Asignatura[] mAsignatura;
     public Docente(){
 
@@ -21,5 +22,13 @@ public class Docente extends Personal implements horasFacultad{
 
     public void setmAsignatura(Asignatura[] mAsignatura) {
         this.mAsignatura = mAsignatura;
+    }
+    public double cantidadHorasMensuales(){
+
+    }
+
+    @Override
+    public double sueldo(double d) {
+        return cantidadHorasMensuales()*salarioHora;
     }
 }
