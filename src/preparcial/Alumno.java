@@ -55,7 +55,13 @@ public class Alumno implements horasFacultad{
 
     }
     public double cantidadHorasMensuales(){
+        double horasTotales = 0;
+        for(int i=0; i< getmAsignatura().length;i++){
+            Asignatura aux = getmAsignatura()[i];
+            horasTotales = horasTotales + aux.cu();
 
+        }
+        return horasTotales;
     }
     public void asignaturaAprobada(){
         for(int i = 0; i<getmAsignatura().length;i++){

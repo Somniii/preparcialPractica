@@ -37,4 +37,9 @@ public class Asignatura {
     public void setHorasCursadas(int horasCursadas) {
         this.horasCursadas = horasCursadas;
     }
+
+    public double cuentaHorasCursada(horasFacultad hora){
+        horasFacultad aux = hora;
+        horasCursadas 
+    }
 }
