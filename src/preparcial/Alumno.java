@@ -60,15 +60,6 @@ public class Alumno implements horasFacultad{
         return promedio;
     }
     public double cantidadHorasMensuales(){
-<<<<<<< HEAD
-        double horasTotales = 0;
-        for(int i=0; i< getmAsignatura().length;i++){
-            Asignatura aux = getmAsignatura()[i];
-            horasTotales = horasTotales + aux.getHorasCursadas();
-        }
-        return horasTotales;
-=======
->>>>>>> ramaIan
     }
     public void asignaturaAprobada(){
         for(int i = 0; i<getmAsignatura().length;i++){
@@ -80,9 +71,6 @@ public class Alumno implements horasFacultad{
             }
         }
     }
-<<<<<<< HEAD
-
-=======
     //ESTO LO METES EN UN FOR EN EL MAIN
     public String toStringHorasyNota(Asignatura a){
         if(a.getNota()>=7){
@@ -101,5 +89,4 @@ public class Alumno implements horasFacultad{
         }
         return "Horas totales "+horas+" promedio total de notas "+ suma/getmAsignatura().length;
     }
->>>>>>> ramaIan
 }
