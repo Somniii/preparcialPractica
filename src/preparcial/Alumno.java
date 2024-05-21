@@ -2,17 +2,17 @@ package preparcial;
 
 public class Alumno implements horasFacultad{
     private String nombre;
-    private double nota;
-    private int horasCursadas;
+    private String apellido;
+    private long dni;
     private Asignatura[] mAsignatura;
     public Alumno(){
 
     }
 
-    public Alumno(Asignatura[] mAsignatura, int horasCursadas, double nota, String nombre) {
+    public Alumno(Asignatura[] mAsignatura, String apellido, long dni, String nombre) {
         this.mAsignatura = mAsignatura;
-        this.horasCursadas = horasCursadas;
-        this.nota = nota;
+        this.apellido = apellido;
+        this.dni = dni;
         this.nombre = nombre;
     }
 
@@ -24,20 +24,20 @@ public class Alumno implements horasFacultad{
         this.nombre = nombre;
     }
 
-    public double getNota() {
-        return nota;
+    public long getDni() {
+        return dni;
     }
 
-    public void setNota(double nota) {
-        this.nota = nota;
+    public void setDni(long dni) {
+        this.dni = dni;
     }
 
-    public int getHorasCursadas() {
-        return horasCursadas;
+    public String getApellido() {
+        return apellido;
     }
 
-    public void setHorasCursadas(int horasCursadas) {
-        this.horasCursadas = horasCursadas;
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public Asignatura[] getmAsignatura() {
@@ -52,25 +52,54 @@ public class Alumno implements horasFacultad{
 
     }
     public double promedio(){
-
+        double promedio = 0;
+        for(int i = 0 ; i<getmAsignatura().length;i++){
+            Asignatura auxA = getmAsignatura()[i];
+            promedio = promedio + auxA.getNota();
+        }
+        return promedio;
     }
     public double cantidadHorasMensuales(){
+<<<<<<< HEAD
         double horasTotales = 0;
         for(int i=0; i< getmAsignatura().length;i++){
             Asignatura aux = getmAsignatura()[i];
             horasTotales = horasTotales + aux.getHorasCursadas();
         }
         return horasTotales;
+=======
+>>>>>>> ramaIan
     }
     public void asignaturaAprobada(){
         for(int i = 0; i<getmAsignatura().length;i++){
             Asignatura auxA = getmAsignatura()[i];
             if(auxA.getNota()>=7){
-             "Aprobado";
+             System.out.println("---------\nAsignatura: "+auxA.getNombre()+"\nAprobada");
             }else{
-
+                System.out.println("---------\nAsignatura: "+auxA.getNombre()+"\nDesaprobada");
             }
         }
     }
+<<<<<<< HEAD
 
+=======
+    //ESTO LO METES EN UN FOR EN EL MAIN
+    public String toStringHorasyNota(Asignatura a){
+        if(a.getNota()>=7){
+            return "Asignatura:"+a.getNombre()+"aprobada con "+a.getNota();
+        }else {
+            return null;
+        }
+    }
+    public String toStringPromedioYHoras(){
+        double suma = 0;
+        int horas = 0;
+        for(int i = 0; i<getmAsignatura().length;i++){
+            Asignatura asig = getmAsignatura()[i];
+            suma = suma + asig.getNota();
+            horas = horas + asig.getHorasCursadas();
+        }
+        return "Horas totales "+horas+" promedio total de notas "+ suma/getmAsignatura().length;
+    }
+>>>>>>> ramaIan
 }
