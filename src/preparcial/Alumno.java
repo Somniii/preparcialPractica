@@ -77,10 +77,6 @@ public class Alumno implements horasFacultad{
             }
         }
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> dfa1ad967036f03a41767c5edf9a58cb32c8433b
     //ESTO LO METES EN UN FOR EN EL MAIN
     public String toStringHorasyNota(Asignatura a){
         if(a.getNota()>=7){
