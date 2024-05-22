@@ -1,7 +1,6 @@
 package preparcial;
 
 public class Docente extends Personal implements horasFacultad{
-    private final static double salarioHora = 2000;
     private Asignatura[] mAsignatura;
     public Docente(){
 
@@ -32,5 +31,8 @@ public class Docente extends Personal implements horasFacultad{
             horasTotalesDocente = horasTotalesDocente + aux.getHorasCursadas() + (10*4.2);
         }
         return horasTotalesDocente;
+    }
+    public  double sueldo(double d){
+        return  cantidadHorasMensuales()*d;
     }
 }

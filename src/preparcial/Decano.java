@@ -1,7 +1,6 @@
 package preparcial;
 
 public class Decano extends Personal implements horasFacultad {
-    private final static double salarioHora = 3000;
 
     public Decano() {
     }
@@ -11,7 +10,7 @@ public class Decano extends Personal implements horasFacultad {
     }
     @Override
     public double sueldo(double d){
-        return cantidadHorasMensuales()*salarioHora;
+        return cantidadHorasMensuales()*d;
     }
     public double cantidadHorasMensuales(){
 

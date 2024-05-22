@@ -1,5 +1,6 @@
 package preparcial;
 
+import javax.print.Doc;
 import java.util.Scanner;
 
 public class Main {
@@ -34,6 +35,21 @@ public class Main {
         int horasCursadas = scan.nextInt();
         Asignatura aux = new Asignatura(nombreA, nota,horasCursadas);
         return aux;
+    }
+
+    public static String stringHorasYSueldoDocente(horasFacultad facultad,double d, double dec){
+        horasFacultad facu = facultad;
+        if(facu instanceof Docente){
+            double horasMensuales = facu.cantidadHorasMensuales();
+            double sueldoMensual = horasMensuales*((Docente) facu).sueldo(d);
+            return "Tus horas trabajadas son "+horasMensuales+"Y tu sueldo es de: "+sueldoMensual+" $";
+        }else if(facu instanceof  Decano){
+            Decano aux = new Decano();
+            double horasMensuales = facu.cantidadHorasMensuales();
+            double sueldoMensual = horasMensuales * ((Decano) facu).sueldo(dec);
+            return "Tus horas trabajadas son "+horasMensuales+"Y tu sueldo es de: "+sueldoMensual+" $";
+        }
+        return "";
     }
 
 }
