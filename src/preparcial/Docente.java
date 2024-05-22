@@ -32,9 +32,14 @@ public class Docente extends Personal implements horasFacultad{
         }
         return horasTotalesDocente;
     }
+<<<<<<< HEAD
 
 
     public double sueldo(double d) {
         return cantidadHorasMensuales()*d;
+=======
+    public  double sueldo(double d){
+        return  cantidadHorasMensuales()*d;
+>>>>>>> dfa1ad967036f03a41767c5edf9a58cb32c8433b
     }
 }
